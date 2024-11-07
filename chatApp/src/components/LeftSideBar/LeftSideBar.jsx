@@ -17,15 +17,17 @@ const LeftSideBar = () => {
             <input type="text" placeholder='Search' />
         </div>
       </div>
-      <div className="ls-list">
-        <div className="friends">
-            <img src={assets.profile_img} alt="" />
-            <div>
-                <p>Username</p>
-                <span>Hello</span>
-            </div>
-        </div>
-      </div>
+          <div className="ls-list">
+              {Array(8).fill('').map((item, index) => (
+                  <div key={index} className="friends">
+                      <img src={assets.profile_img} alt="" />
+                      <div>
+                          <p>Orlando Henry</p>
+                          <span>Hello, How have you been mate?</span>
+                      </div>
+                  </div>
+              ))}
+          </div>
     </div>
   )
 }
